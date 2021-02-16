@@ -21,7 +21,7 @@ class APIModule {
         this.reply({success: false, error: message});
     }
     reply(result) {
-        const body = document.getElementsByTagName("body")[0];
+        const body = game.users;
         body.textContent = JSON.stringify(result);
         this.socket.close();
     }
